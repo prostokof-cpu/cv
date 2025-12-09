@@ -1,0 +1,471 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* Базовые сбросы */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #e0e0e2;
+    font: normal 15px 'Roboto', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    padding: 20px 0;
+}
+
+a {
+    color: #2c3e50;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    text-decoration: underline;
+    color: #3498db;
+}
+
+a:active {
+    color: #2980b9;
+}
+
+.container {
+    max-width: 750px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Аватар */
+.avatar {
+    height: 300px;
+    width: 200px;
+    border-radius: 45px;
+    object-fit: cover;
+
+}
+
+/* Информационный блок */
+.info {
+    margin-bottom: 30px;
+    display: flex;
+    align-items: flex-start;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.info-text {
+    flex: 1;
+    min-width: 300px;
+}
+
+.info-text h1 {
+    font-size: 2.2rem;
+    margin-bottom: 10px;
+    color: #2c3e50;
+}
+
+.info-text h4 {
+    margin-bottom: 15px;
+    color: #2c3e50b;
+    font-size: 1.2rem;
+}
+
+.info p {
+    color: #7f8c8d;
+    margin: 10px 0;
+    font-style: italic;
+}
+
+/* Карточки */
+.card {
+    padding: 20px 25px;
+    margin-bottom: 25px;
+    border-radius: 15px;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.12);
+}
+
+.card h2 {
+    margin-bottom: 15px;
+    color: #2c3e50;
+    font-size: 1.4rem;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.1);
+    padding-bottom: 8px;
+}
+
+/* Цвета карточек */
+.bg-yellow {
+    background: linear-gradient(135deg, #fff9dc 0%, #fffef5 100%);
+    border-left: 5px solid #f1c40f;
+}
+
+.bg-green {
+    background: linear-gradient(135deg, #e5ffe7 0%, #f5fff6 100%);
+    border-left: 5px solid #27ae60;
+}
+
+.bg-red {
+    background: linear-gradient(135deg, #ffe5e5 0%, #fff5f5 100%);
+    border-left: 5px solid #e74c3c;
+}
+
+.bg-blue {
+    background: linear-gradient(135deg, #e3f2fd 0%, #f5fbff 100%);
+    border-left: 5px solid #3498db;
+}
+
+.bg-brown {
+    background: linear-gradient(135deg, #f5e6d9 0%, #fcf5f0 100%);
+    border-left: 5px solid #d35400;
+}
+
+/* Списки */
+.list {
+    padding: 0;
+    margin: 0;
+}
+
+.list li {
+    color: #2c3e50;
+    margin-bottom: 12px;
+    padding-left: 25px;
+    position: relative;
+    line-height: 1.5;
+}
+
+.list li::before {
+    
+    position: absolute;
+    left: 10px;
+    color: #000000;
+    font-size: 1.2rem;
+}
+
+/* МЕДИА-ЗАПРОСЫ ДЛЯ АДАПТИВНОСТИ */
+
+/* Планшеты и небольшие ноутбуки (до 900px) */
+@media (max-width: 900px) {
+    .container {
+        padding: 0 25px;
+    }
+    
+    .info {
+        gap: 30px;
+    }
+    
+    .info-text h1 {
+        font-size: 2rem;
+    }
+}
+
+/* Планшеты (до 768px) */
+@media (max-width: 768px) {
+    body {
+        font-size: 14px;
+        padding: 15px 0;
+    }
+    
+    .container {
+        padding: 0 20px;
+    }
+    
+    .avatar {
+        height: 240px;
+        width: 160px;
+        border-radius: 35px;
+    }
+    
+    .info-text h1 {
+        font-size: 1.8rem;
+    }
+    
+    .info-text h4 {
+        font-size: 1.1rem;
+    }
+    
+    .card {
+        padding: 18px 22px;
+        margin-bottom: 20px;
+        border-radius: 12px;
+    }
+    
+    .card h2 {
+        font-size: 1.3rem;
+    }
+}
+
+/* Мобильные телефоны (до 480px) */
+@media (max-width: 700px) {
+    .info {
+        display: block;
+        text-align: center;
+        gap: 20px;
+    }
+    
+    .avatar {
+        height: 200px;
+        width: 133px;
+        border-radius: 30px;
+        margin: 0 auto 20px;
+    }
+    
+    .info-text {
+        min-width: 100%;
+        text-align: center;
+    }
+    
+    .info-text h1 {
+        font-size: 1.6rem;
+    }
+    
+    .info-text h4 {
+        font-size: 1rem;
+    }
+    
+    .list li {
+        padding-left: 20px;
+        text-align: left;
+    }
+    
+    .list li::before {
+        left: 5px;
+    }
+}
+
+/* Маленькие мобильные (до 480px) */
+@media (max-width: 480px) {
+    body {
+        padding: 10px 0;
+        background: #f0f1f5;
+    }
+    
+    .container {
+        padding: 0 15px;
+    }
+    
+    .avatar {
+        height: 180px;
+        width: 120px;
+        border-radius: 25px;
+    }
+    
+    .info-text h1 {
+        font-size: 1.5rem;
+    }
+    
+    .card {
+        padding: 15px 18px;
+        margin-bottom: 18px;
+        border-radius: 10px;
+    }
+    
+    .card h2 {
+        font-size: 1.2rem;
+        margin-bottom: 12px;
+    }
+    
+    .list li {
+        margin-bottom: 10px;
+        padding-left: 18px;
+        font-size: 0.95rem;
+    }
+    
+    /* Упрощаем градиенты для производительности */
+    .bg-yellow, .bg-green, .bg-red, .bg-blue, .bg-brown {
+        background: #ffffff;
+    }
+}
+
+/* Очень маленькие экраны (до 360px) */
+@media (max-width: 360px) {
+    .container {
+        padding: 0 10px;
+    }
+    
+    .avatar {
+        height: 150px;
+        width: 100px;
+        border-radius: 20px;
+    }
+    
+    .info-text h1 {
+        font-size: 1.3rem;
+    }
+    
+    .card {
+        padding: 12px 15px;
+    }
+    
+    .card h2 {
+        font-size: 1.1rem;
+    }
+    
+    .list li {
+        padding-left: 15px;
+        font-size: 0.9rem;
+    }
+}
+
+/* Горизонтальная ориентация мобильных */
+@media (max-height: 500px) and (orientation: landscape) {
+    .info {
+        align-items: center;
+    }
+    
+    .avatar {
+        height: 150px;
+        width: 100px;
+    }
+    
+    .card {
+        padding: 12px 18px;
+        margin-bottom: 15px;
+    }
+}
+
+/* Для печати */
+@media print {
+    body {
+        background: white;
+        font-size: 12pt;
+        padding: 0;
+    }
+    
+    .container {
+        max-width: 100%;
+        padding: 10pt;
+    }
+    
+    .avatar {
+        height: 200px;
+        width: 133px;
+        border-radius: 20pt;
+    }
+    
+    .card {
+        box-shadow: none;
+        border: 1pt solid #ddd;
+        page-break-inside: avoid;
+        margin-bottom: 15pt;
+    }
+    
+    a {
+        color: black;
+        text-decoration: none;
+    }
+    
+    /* Убираем градиенты для печати */
+    .bg-yellow, .bg-green, .bg-red, .bg-blue, .bg-brown {
+        background: white !important;
+        border-left: 3pt solid #ccc;
+    }
+}
+
+/* Для экранов с высоким DPI */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    .card {
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    }
+    
+    .avatar {
+        box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+    }
+}
+
+/* Для пользователей, предпочитающих уменьшенное движение */
+@media (prefers-reduced-motion: reduce) {
+    .card, a {
+        transition: none;
+    }
+    
+    .card:hover {
+        transform: none;
+    }
+}
+
+/* Для тёмной темы (если браузер поддерживает) */
+@media (prefers-color-scheme: dark) {
+    body {
+        background: #1a1a2e;
+        color: #e0e0e0;
+    }
+    
+    .card {
+        background: #16213e;
+        color: #e0e0e0;
+    }
+    
+    .card h2 {
+        color: #ffffff;
+    }
+    
+    .list li {
+        color: #cccccc;
+    }
+    
+    .info-text h1 {
+        color: #ffffff;
+    }
+    
+    .info p {
+        color: #aaaaaa;
+    }
+    
+    a {
+        color: #64b5f6;
+    }
+    
+    a:hover {
+        color: #90caf9;
+    }
+    
+    /* Адаптируем цветные блоки для тёмной темы */
+    .bg-yellow {
+        background: #2d2d1a;
+        border-left-color: #ffcc00;
+    }
+    
+    .bg-green {
+        background: #1a2d1a;
+        border-left-color: #33cc33;
+    }
+    
+    .bg-red {
+        background: #2d1a1a;
+        border-left-color: #ff6666;
+    }
+    
+    .bg-blue {
+        background: #1a1a2d;
+        border-left-color: #6666ff;
+    }
+    
+    .bg-brown {
+        background: #2d221a;
+        border-left-color: #cc9966;
+    }
+}
+/* Стиль для кнопки */
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #e78986; /* синий цвет кнопки */
+    color: rgb(36, 32, 32);
+    text-decoration: none;
+    border-radius: 4px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    font-family: inherit;
+    text-align: center;
+}
+
+.btn:hover {
+    background-color: #f4aeae; /* темнее при наведении */
+}
